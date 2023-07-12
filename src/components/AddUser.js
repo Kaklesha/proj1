@@ -3,6 +3,7 @@ import React from 'react';
 
 
 class AddUser extends React.Component {
+    userAdd={}
     constructor(props){
         super(props)
         this.state={
@@ -13,11 +14,12 @@ class AddUser extends React.Component {
             isHappy: false
 
         }
+
     }
 
     render(){
       return(
-    <form action="">
+    <form ref={(el)=>this.myForm=el} >
 
         <input placeholder='Name' onChange={(e)=>this.setState({firstname: e.target.value})}/>
         <input placeholder='Family' onChange={(e)=>this.setState({lastname: e.target.value})}/> 
@@ -25,13 +27,20 @@ class AddUser extends React.Component {
         <input placeholder='Age' onChange={(e)=>this.setState({age: e.target.value})}/> 
         <label htmlFor="isHappy">is he/she Happy?</label>
         <input type='checkbox' id="isHappy" onChange={(e)=>this.setState({isHappy: e.target.checked })} />
-        <button type='button' onClick={()=>this.props.onAdd({
+        <button type='button' onClick={()=>{
+
+        this.myForm.reset()
+        this.userAdd={
+
             firstname: this.state.firstname ,
             lastname: this.state.lastname,
             bio: this.state.bio,
             age: this.state.age,
             isHappy: this.state.isHappy,
-        })}> Add</button>
+        }
+        if(this.props.user)
+            this.userAdd.id=this.props.user.id
+        this.props.onAdd(this.userAdd)}}> Add</button>
     </form>
       )
     }

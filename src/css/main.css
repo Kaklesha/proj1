@@ -59,7 +59,7 @@ main .edit-icon:hover{
 }
 
 
-aside form input:not([type="checkbox"]), aside form textarea, aside form button {
+ form input:not([type="checkbox"]), aside form textarea, aside form button {
     width: 90%;
     padding: 15px 5%;
     font-family: 'Montserrat', sans-serif;
@@ -74,16 +74,28 @@ aside form input:not([type="checkbox"]), aside form textarea, aside form button 
 }
 
 
-aside form input[type="checkbox"]{
+form input[type="checkbox"]{
     margin: 10px;
 }
 
-aside form button {
+ form button {
     width: 100%;
     cursor: pointer;
     transition: transform 500ms ease;
 }
 
-aside form button:hover{
+form button:hover{
     transform: scale(1.1);
+}
+
+.user form{ margin-top: 20px;
+
+}
+.user form input,
+.user form button,
+.user form textarea {
+    background: #134b57;
+}
+.user form button:hover{
+    transform: scale(1.01);
 }
