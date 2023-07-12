@@ -14,6 +14,11 @@ import logo from './img/anime-girl-rain.png'
       this.inputClick=this.inputClick.bind(this)
     }
   
+    componentDidUpdate(prevProp){
+      if(this.state.helpText!=="Help")
+      console.log("some")
+    }
+
     render(){
       return (
         <div className="ff">
