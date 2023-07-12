@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# ЭТО 1 Часть Домашнего задания от 11.07.23
+https://www.youtube.com/playlist?list=PLDyJYA6aTY1lpbNh66kFpF62QpJyzliT2
+![image](https://github.com/Kaklesha/proj1/assets/99747000/d3fc264e-3235-4381-b703-f13ad91fbfb1)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
